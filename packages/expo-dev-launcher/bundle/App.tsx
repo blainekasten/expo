@@ -5,6 +5,7 @@ import * as React from 'react';
 
 import { AppProviders } from './components/redesign/AppProviders';
 import { LoadInitialData } from './components/redesign/LoadInitialData';
+import { PendingDeepLinkPrompt } from './components/redesign/PendingDeepLinkPrompt';
 import { Splash } from './components/redesign/Splash';
 import { HomeScreen } from './screens/HomeScreen';
 import { SettingsScreen } from './screens/SettingsScreen';
@@ -30,6 +31,8 @@ export function App(props: LauncherAppProps) {
             options={{ header: () => null }}
           />
         </Stack.Navigator>
+
+        <PendingDeepLinkPrompt packagers={[]} />
       </AppProviders>
     </LoadInitialData>
   );
